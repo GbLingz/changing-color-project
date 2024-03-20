@@ -33,7 +33,10 @@ let dec = document.querySelector(".dec");
 let h1 = document.querySelector("h1");
 function decremental() {
   h1.innerText--;
-  document.body.style.backgroundColor = "red";
+  // document.body.style.backgroundColor = "red";
+    if (parseInt(h1.innerText) < 0) {
+    document.body.style.backgroundColor = "red";
+  }
 }
 dec.addEventListener("click", decremental);
 
@@ -42,16 +45,65 @@ let inc = document.querySelector(".inc");
 let h2 = document.querySelector("h1");
 function incremental() {
   h2.innerText++;
-  document.body.style.backgroundColor = "green";
+  // document.body.style.backgroundColor = "green";
+    if (parseInt(h1.innerText) > 0) {
+    document.body.style.backgroundColor = "green";
+  }
 }
 inc.addEventListener("click", incremental);
-
 
 // to zero
 let res = document.querySelector(".res");
 let h3 = document.querySelector("h1");
 function reset () {
     h3.innerText = 0;
+    // document.body.style.backgroundColor = "yellow";
+      if (parseInt(h1.innerText) === 0) {
     document.body.style.backgroundColor = "yellow";
   }
+
+  }
   res.addEventListener("click", reset);
+
+
+
+
+
+
+
+
+
+
+
+
+// // Decrease
+// function decremental() {
+//   h1.innerText--;
+//   if (parseInt(h1.innerText) < 0) {
+//     document.body.style.backgroundColor = "red";
+//   }
+// }
+// dec.addEventListener("click", decremental);
+
+// // Increase
+// let inc = document.querySelector(".inc");
+// let h2 = document.querySelector("h1");
+
+// function incremental() {
+//   h2.innerText++;
+//   if (parseInt(h1.innerText) > 0) {
+//     document.body.style.backgroundColor = "green";
+//   }
+// }
+// inc.addEventListener("click", incremental);
+
+// // to reset
+// let res = document.querySelector(".res");
+// let h3 = document.querySelector("h1");
+// function reset() {
+//   h3.innerText = 0;
+//   if (parseInt(h1.innerText) === 0) {
+//     document.body.style.backgroundColor = "yellow";
+//   }
+// }
+// res.addEventListener("click", reset);
